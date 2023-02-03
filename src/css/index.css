@@ -2,8 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #1e2326;
-/*   color: #1cb698;
- */  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #root {
