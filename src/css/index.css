@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e2326;
+/*   color: #1cb698;
+ */  font-family: 'Ubuntu', sans-serif;
+}
+
+#root {
+  margin: 30px 34px;
+  position: relative;
+  min-height: 100vh;
+}
