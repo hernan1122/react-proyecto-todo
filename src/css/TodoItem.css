@@ -50,8 +50,8 @@
   position: absolute;
   top: -24px;
   right: 0;
-  color: #757575;
+  color: #F44336;
 }
 .Icon-delete:hover {
-  color: #F44336;
+  color: #f51708;
 }
