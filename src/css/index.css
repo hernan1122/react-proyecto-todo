@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
   background: linear-gradient(to top, #FFC107, #FF9800);
+  /* background: linear-gradient(to top, #FFC107, #e68a00); */
 }
 
 #root {
