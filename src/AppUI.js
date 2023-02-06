@@ -1,4 +1,5 @@
 import React from 'react';
+import { TodoHeader } from './components/TodoHeader.js';
 import { TodoContext } from './TodoContext/index.js';
 import { TodoCounter } from './components/TodoCounter.js';
 import { TodoSearch } from "./components/TodoSearch.js";
@@ -24,6 +25,7 @@ function AppUI() {
 
   return (
     <React.Fragment>
+      <TodoHeader />
       <TodoCounter />
       <TodoSearch />
 

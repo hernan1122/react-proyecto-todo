@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: #1e2326;
   font-family: 'Ubuntu', sans-serif;
+  background: linear-gradient(to top, #FFC107, #FF9800);
 }
 
 #root {
