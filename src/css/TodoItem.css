@@ -32,15 +32,17 @@
   align-items: center;
   height: 48px;
   width: 48px;
-  font-size: 27px;
+  font-size: 28px;
   font-weight: bold;
-  /* background-color: #CCC; */
 }
 
 .Icon-check {
   position: absolute;
   left: 12px;
-  color: #757575;
+  color: #4caf4f57;
+}
+.Icon-check:hover {
+  color: #4caf50;
 }
 .Icon-check--active {
   color: #4caf50;
