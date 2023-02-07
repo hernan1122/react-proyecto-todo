@@ -5,7 +5,7 @@ function TodoHeader({ children, loading }) {
     <header>
       {
         React.Children
-          .toArray(children)
+        .toArray(children)
           .map(child => React.cloneElement(child, { loading }))
       }
     </header>

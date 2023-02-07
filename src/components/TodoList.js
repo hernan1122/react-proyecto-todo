@@ -15,7 +15,7 @@ function TodoList(props) {
       {/* si es true que totalTodos no es 0, null o undefined y ademas la longitud de searchedTodos es 0, entonces voy a renderizar lo que venga en onEmptySearchResults() */}
       {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptySearchResults(props.searchText)}
 
-      {props.searchedTodos.map(renderFunc)}
+      {(!props.loading && !props.error) && props.searchedTodos.map(renderFunc)}
 
       <ul>
         {props.children}
