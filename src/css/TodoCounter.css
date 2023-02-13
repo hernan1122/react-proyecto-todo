@@ -1,7 +1,7 @@
 .TodoCounter {
   font-size: 24px;
   text-align: center;
-  color: #fcecbe;
+  color: #757575;
 }
 .TodoCounter--loading {
   opacity: 35%;

@@ -14,7 +14,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  color: #FFECB3;
+  color: #98ca3f;
 }
 .LoadingTodo-completeIcon,
 .LoadingTodo-deleteIcon {
@@ -34,7 +34,7 @@
 .LoadingTodo-container,
 .LoadingTodo-completeIcon,
 .LoadingTodo-deleteIcon {
-  background: linear-gradient(90deg, #FF9800, #bbbbbb83);
+  background: linear-gradient(90deg, #0c1633, #98ca3f);
   background-size: 400% 400%;
   animation: loadingAnimation 3s ease-in-out infinite;
 }

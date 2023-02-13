@@ -3,9 +3,8 @@
   height: 100px;
   background-color: transparent;
   position: relative;
-  border: 1px solid none;
+  border: 1px solid #98ca3f;
   border-radius: 20px 0 20px 0;
-  box-shadow: 0px 0px 16px 6px rgba(255,160,0,0.75);
   display: flex;
   justify-content: center;
   align-items: center;
