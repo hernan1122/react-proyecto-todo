@@ -5,9 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 90px;
   gap: 20px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
 }
 .LoadingTodo-circle {
   border-radius: 50px;
