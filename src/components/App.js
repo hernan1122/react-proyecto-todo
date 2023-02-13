@@ -15,24 +15,29 @@ import { Modal } from '../Modal/index.js';
 import { ChangeAlert } from "../HOC/ChangeAlert";
 
 function App() {
+  const { states, stateUpdaters } = useTodos();
+
   const {
     error,
     loading,
     searchedTodos,
-    completeTodo,
-    deleteTodo,
-    openModal,
-    setOpenModal,
     totalTodos,
     completedTodos,
+    openModal,
     searchValue,
-    setSearchValue,
+  } = states;
+  
+  const {
+    setOpenModal,
     addTodo,
+    completeTodo,
+    deleteTodo,
+    setSearchValue,
     sincronizeTodos,
-  } = useTodos();
+  } = stateUpdaters;
 
   return (
-    <React.Fragment>
+    <>
       <TodoHeader loading={loading}>
         <TodoTitle />
         <TodoCounter
@@ -94,7 +99,7 @@ function App() {
       <ChangeAlert
         sincronize={sincronizeTodos}
       />
-    </React.Fragment>
+    </>
   );
 }
 
