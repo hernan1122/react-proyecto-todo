@@ -1,8 +1,9 @@
 import React from "react";
+import '../css/TodoHeader.css';
 
 function TodoHeader({ children, loading }) {
   return (
-    <header>
+    <header className="TodoHeader-container">
       {
         React.Children
         .toArray(children)
