@@ -1,6 +1,4 @@
 .TodoItem {
-  width: 100%;
-  height: 100px;
   background-color: transparent;
   position: relative;
   border: 1px solid #98ca3f;
@@ -12,9 +10,9 @@
 }
 
 .TodoItem-p {
-  /* margin: 24px 0 24px 24px; */
+  margin: 24px 0 24px 24px;
   width: calc(100% - 120px);
-  height: 10px;
+  height: auto;
   color: #757575;
   font-size: 18px;
   line-height: 24px;
@@ -45,6 +43,16 @@
 }
 .Icon-check--active {
   color: #4caf50;
+}
+
+.Icon-edit {
+  position: absolute;
+  top: -24px;
+  right: 40px;
+  color: #2196F3;
+}
+.Icon-edit:hover {
+  color: #1664b3;
 }
 
 .Icon-delete {

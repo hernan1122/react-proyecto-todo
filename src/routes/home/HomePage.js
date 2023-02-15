@@ -1,20 +1,20 @@
 import React from "react";
-import { useTodos } from "./useTodos";
-import { TodoHeader } from '../components/TodoHeader';
-import { TodoTitle } from '../components/TodoTitle.js';
-import { TodoCounter } from '../components/TodoCounter.js';
-import { TodoSearch } from "../components/TodoSearch.js";
-import { TodoList } from "../components/TodoList.js";
-import { TodoItem } from "../components/TodoItem.js";
-import { TodosError } from '../components/TodosError.js';
-import { TodosLoading } from '../components/TodosLoading.js';
-import { EmptyTodos } from '../components/EmptyTodos.js';
-import { TodoForm } from '../components/TodoForm.js';
-import { CreateTodoButton } from "../components/CreateTodoButton.js";
-import { Modal } from '../Modal/index.js';
-import { ChangeAlert } from "../HOC/ChangeAlert";
+import { useNavigate } from "react-router-dom";
+import { useTodos } from "../useTodos";
+import { TodoHeader } from '../../ui/TodoHeader';
+import { TodoTitle } from '../../ui/TodoTitle.js';
+import { TodoCounter } from '../../ui/TodoCounter.js';
+import { TodoSearch } from "../../ui/TodoSearch.js";
+import { TodoList } from "../../ui/TodoList.js";
+import { TodoItem } from "../../ui/TodoItem.js";
+import { TodosError } from '../../ui/TodosError.js';
+import { TodosLoading } from '../../ui/TodosLoading.js';
+import { EmptyTodos } from '../../ui/EmptyTodos.js';
+import { CreateTodoButton } from "../../ui/CreateTodoButton.js";
+import { ChangeAlert } from "../../HOC/ChangeAlert";
 
-function App() {
+function HomePage() {
+  const navigate = useNavigate();
   const { states, stateUpdaters } = useTodos();
 
   const {
@@ -23,13 +23,13 @@ function App() {
     searchedTodos,
     totalTodos,
     completedTodos,
-    openModal,
+    // openModal,
     searchValue,
   } = states;
   
   const {
-    setOpenModal,
-    addTodo,
+    // setOpenModal,
+    // addTodo,
     completeTodo,
     deleteTodo,
     setSearchValue,
@@ -62,38 +62,48 @@ function App() {
         onEmptyTodos={() => <EmptyTodos />}
         onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p>}
         //render functions
-        render={todo => (
+        /* render={todo => (
           <TodoItem
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            //onEdit={() => completeTodo(todo.text)}
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
+          />
+        )} */
+      >
+        {todo => (
+          <TodoItem
+            key={todo.id}
+            text={todo.text}
+            completed={todo.completed}
+            onEdit={() => {
+              navigate(
+                '/edit/' + todo.id,
+                {
+                  state: { todo }
+                },
+              )
+            }}
+            onComplete={() => completeTodo(todo.id)}
+            onDelete={() => deleteTodo(todo.id)}
           />
         )}
-      >
-        {/* {todo => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => completeTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-          />
-        )} */}
       </TodoList>
 
-      {!!openModal && (
+      {/* {!!openModal && (
         <Modal>
           <TodoForm
             addTodo={addTodo}
             setOpenModal={setOpenModal}
           />
         </Modal>
-      )}
+      )} */}
 
       <CreateTodoButton
-        setOpenModal={setOpenModal}
+        onClick={() => navigate('/new')}
+        // setOpenModal={setOpenModal}
       />
 
       <ChangeAlert
@@ -103,4 +113,4 @@ function App() {
   );
 }
 
-export default App;
+export { HomePage };
